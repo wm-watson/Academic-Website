@@ -3,124 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Will Watson — Health services researcher bridging academic rigor and industry application. Specializing in insurance design, provider policy, and spatial epidemiology.">
-  <title>Elementary, Dear Watson — Will Watson, PhD Candidate</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Elementary, Dear Watson — Will Watson, Health Services Researcher. Site launching soon.">
+  <title>Elementary, Dear Watson — Coming Soon</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1a2332;
+      --gold: #c8a45c;
+      --gold-light: #e8d5a3;
+      --cream: #faf8f4;
+    }
+    html { font-size: 17px; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--navy);
+      color: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container { max-width: 600px; }
+    h1 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3em;
+      letter-spacing: 0.02em;
+    }
+    .tagline {
+      font-style: italic;
+      color: var(--gold-light);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+    .name {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.3em;
+    }
+    .title {
+      color: #8a96a8;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .status {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: var(--gold-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      transition: color 0.2s;
+    }
+    a:hover { color: #fff; }
+    .contact {
+      font-size: 0.9rem;
+      color: #8a96a8;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
 </head>
 <body>
-
-  <header>
-    <div class="container">
-      <div class="site-brand">
-        <a href="index.html">
-          <span class="site-title">Elementary, Dear Watson</span>
-          <span class="site-tagline">Making health services research accessible</span>
-        </a>
-      </div>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="cv.html">CV</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Will Watson</h1>
-      <p class="subtitle">Health Services Researcher &bull; Data Scientist &bull; Policy Analyst</p>
-      <p>
-        Five years inside a major health insurer. A PhD grounded in causal
-        inference, program evaluation, and geospatial methods. I study how
-        policy decisions shape access to care — and translate those findings
-        into evidence that decision-makers can use.
-      </p>
-      <div class="cta-row">
-        <a href="research.html" class="btn btn-primary">View My Research</a>
-        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="content">
-    <div class="container">
-
-      <section>
-        <h2>What I Do</h2>
-        <p>
-          I investigate questions at the intersection of insurance design, provider
-          regulation, and geographic access to care. My work draws on large-scale
-          administrative claims data, causal inference methods like
-          difference-in-differences and synthetic controls, and GIS-based spatial
-          analysis to produce research that is both methodologically rigorous and
-          practically relevant to payers, policymakers, and health systems.
-        </p>
-      </section>
-
-      <section>
-        <h2>Current Research</h2>
-        <div class="card-grid">
-
-          <div class="card">
-            <span class="tag">Pharmaceutical Policy</span>
-            <h3>IRA Insulin Copay Caps</h3>
-            <p>Evaluating the Inflation Reduction Act's capped insulin copay provision in Medicare Advantage populations using IQVIA Pharmetrics Plus data and difference-in-differences methods to assess impact on medication adherence and healthcare outcomes.</p>
-            <a href="research.html#insulin">Read more &rarr;</a>
-          </div>
-
-          <div class="card">
-            <span class="tag">Provider Policy</span>
-            <h3>APRN Scope of Practice</h3>
-            <p>Using synthetic control methods to analyze the impact of full practice authority for Advanced Practice Registered Nurses on diabetes treatment outcomes, framed by Penchansky &amp; Thomas's 5 A's of Access.</p>
-            <a href="research.html#aprn">Read more &rarr;</a>
-          </div>
-
-          <div class="card">
-            <span class="tag">Spatial Epidemiology</span>
-            <h3>Diabetic Foot Ulcers in Arkansas</h3>
-            <p>Applying emerging hotspot analysis and explanatory modeling to map the prevalence and spatial patterns of diabetic foot ulcers statewide, identifying risk factors and underserved areas.</p>
-            <a href="research.html#dfu">Read more &rarr;</a>
-          </div>
-
-        </div>
-      </section>
-
-      <section>
-        <h2>Background</h2>
-        <p>
-          Before pursuing my PhD in Health Systems &amp; Services at the
-          University of Arkansas for Medical Sciences, I spent five years at
-          Blue Cross Blue Shield of Arkansas in roles spanning product
-          modernization, data strategy, and senior data analysis. That experience
-          shapes how I approach research — I ask questions that matter to the
-          people making coverage and policy decisions, and I present answers in
-          terms they can act on.
-        </p>
-        <p>
-          I'm also a published researcher, with work in PLOS One and Frontiers
-          in Public Health on geospatial health analytics, and I've presented
-          at the American Society of Health Economists (ASHEcon) national
-          conference.
-        </p>
-        <a href="about.html">More about me &rarr;</a>
-      </section>
-
-    </div>
+  <div class="container">
+    <h1>Elementary, Dear Watson</h1>
+    <p class="tagline">Making health services research accessible</p>
+    <div class="divider"></div>
+    <p class="name">Will Watson</p>
+    <p class="title">
+      PhD Candidate, Health Systems &amp; Services<br>
+      University of Arkansas for Medical Sciences
+    </p>
+    <p class="status">Site Under Construction</p>
+    <p class="contact">
+      <a href="mailto:watsonwp@gmail.com">watsonwp@gmail.com</a>
+    </p>
   </div>
-
-  <footer>
-    <div class="container">
-      &copy; 2026 Will Watson &bull;
-      <a href="mailto:watsonwp@gmail.com">watsonwp@gmail.com</a> &bull;
-      <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </footer>
-
 </body>
 </html>

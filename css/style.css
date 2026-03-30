@@ -1,0 +1,501 @@
+/* ============================================
+   elementarydearwatson.com — Stylesheet
+   Color palette: Deep navy, warm gold accent,
+   clean whites — subtle detective/scholarly feel
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #1a2332;
+  --navy-light: #2a3a4e;
+  --gold: #c8a45c;
+  --gold-light: #e8d5a3;
+  --cream: #faf8f4;
+  --white: #ffffff;
+  --text: #2c2c2c;
+  --text-light: #5a5a5a;
+  --border: #e0ddd6;
+  --shadow: rgba(26, 35, 50, 0.08);
+  --max-width: 1100px;
+  --font-body: 'Georgia', 'Times New Roman', serif;
+  --font-heading: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+a:hover {
+  color: var(--gold);
+  border-color: var(--navy);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.2rem; margin-bottom: 0.6em; }
+h2 { font-size: 1.6rem; margin-bottom: 0.5em; }
+h3 { font-size: 1.2rem; margin-bottom: 0.4em; }
+h4 { font-size: 1rem; margin-bottom: 0.3em; font-weight: 700; }
+
+p {
+  margin-bottom: 1.2em;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Header & Nav --- */
+header {
+  background: var(--navy);
+  border-bottom: 3px solid var(--gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.site-brand {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 0;
+}
+
+.site-brand a {
+  border: none;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.site-tagline {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--gold-light);
+  font-style: italic;
+  letter-spacing: 0.03em;
+  margin-top: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 0.2rem;
+}
+
+nav a {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  border: none;
+  padding: 1rem 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s, background 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--white);
+  background: var(--navy-light);
+}
+
+/* Hamburger (mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gold-light);
+  margin: 5px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* --- Hero Section (Home page) --- */
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 4rem 0 3.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 2.6rem;
+  margin-bottom: 0.3em;
+}
+
+.hero .subtitle {
+  color: var(--gold-light);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-style: italic;
+  margin-bottom: 1.5em;
+}
+
+.hero p {
+  color: #c5cdd8;
+  max-width: 680px;
+  margin: 0 auto 1.5em;
+  font-size: 1.05rem;
+}
+
+.hero .cta-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.6rem;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  color: var(--navy);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+.btn-outline:hover {
+  background: var(--gold-light);
+  color: var(--navy);
+}
+
+a.btn {
+  border-bottom: none;
+}
+
+/* --- Page Header (non-home pages) --- */
+.page-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 2.5rem 0 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--white);
+  margin-bottom: 0.2em;
+}
+
+.page-header .lead {
+  color: var(--gold-light);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+/* --- Content Sections --- */
+.content {
+  padding: 3rem 0;
+}
+
+.content section {
+  margin-bottom: 2.5rem;
+}
+
+/* Card grid for research / highlights */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(26, 35, 50, 0.12);
+}
+
+.card h3 {
+  margin-bottom: 0.5em;
+}
+
+.card .tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--gold-light);
+  color: var(--navy);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.card .methods, .card .data, .card .policy {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.3em;
+}
+
+.card .methods strong, .card .data strong, .card .policy strong {
+  color: var(--navy);
+}
+
+/* Two-column layout (about page, etc.) */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Photo placeholder */
+.photo-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--navy-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--gold);
+}
+
+/* --- Timeline / Experience --- */
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 2px solid var(--gold);
+}
+
+.timeline-item h3 {
+  margin-bottom: 0.15em;
+}
+
+.timeline-item .dates {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --- Table (CV page) --- */
+.cv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.cv-table th {
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-light);
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--navy);
+}
+
+.cv-table td {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+  max-width: 550px;
+}
+
+.contact-form label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--navy);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--white);
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--navy);
+  color: #8a96a8;
+  border-top: 3px solid var(--gold);
+  padding: 1.5rem 0;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+footer a {
+  color: var(--gold-light);
+  border-bottom-color: transparent;
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+
+  header .container {
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: var(--navy-light);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}

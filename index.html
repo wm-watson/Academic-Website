@@ -3,101 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elementary, Dear Watson — Will Watson, Health Services Researcher. Site launching soon.">
-  <title>Elementary, Dear Watson — Coming Soon</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #1a2332;
-      --gold: #c8a45c;
-      --gold-light: #e8d5a3;
-      --cream: #faf8f4;
-    }
-    html { font-size: 17px; }
-    body {
-      font-family: 'Georgia', 'Times New Roman', serif;
-      background: var(--navy);
-      color: var(--cream);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    .container { max-width: 600px; }
-    h1 {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.3em;
-      letter-spacing: 0.02em;
-    }
-    .tagline {
-      font-style: italic;
-      color: var(--gold-light);
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
-    }
-    .divider {
-      width: 60px;
-      height: 3px;
-      background: var(--gold);
-      margin: 0 auto 2rem;
-      border-radius: 2px;
-    }
-    .name {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 0.3em;
-    }
-    .title {
-      color: #8a96a8;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-    .status {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-    }
-    a {
-      color: var(--gold-light);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold);
-      transition: color 0.2s;
-    }
-    a:hover { color: #fff; }
-    .contact {
-      font-size: 0.9rem;
-      color: #8a96a8;
-    }
-    @media (max-width: 480px) {
-      h1 { font-size: 1.7rem; }
-    }
-  </style>
+  <meta name="description" content="William Watson — Health services researcher bridging payer experience and academic rigor. PhD candidate at UAMS.">
+  <title>Elementary, Dear Watson</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Elementary, Dear Watson</h1>
-    <p class="tagline">Making health services research accessible</p>
-    <div class="divider"></div>
-    <p class="name">William Watson</p>
-    <p class="title">
-      PhD Candidate, Health Systems &amp; Services Research<br>
-      University of Arkansas for Medical Sciences<br>
-    </p>
-    <p class="status">Site Under Construction</p>
-    <p class="contact">
-      <a href="mailto:watsonwp@gmail.com">watsonwp@gmail.com</a>
-    </p>
+
+  <header>
+    <div class="container">
+      <div class="site-brand">
+        <a href="index.html">
+          <span class="site-title">Elementary, Dear Watson</span>
+          <span class="site-tagline">Making health services research accessible</span>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>William Watson</h1>
+      <p class="subtitle">Health Services Researcher &bull; PhD Candidate, UAMS</p>
+      <p>
+        I study how insurance design, provider regulation, and geography
+        shape access to care &mdash; combining five years of payer experience
+        at Blue Cross Blue Shield with causal inference, administrative claims
+        analysis, and spatial analytics.
+      </p>
+      <div class="cta-row">
+        <a href="research.html" class="btn btn-primary">View Research</a>
+        <a href="about.html" class="btn btn-outline">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="content">
+    <div class="container">
+
+      <section>
+        <h2>Dissertation Research</h2>
+        <p>
+          My three-paper dissertation examines Type II diabetes through causal
+          inference, statistical, and geospatial methods &mdash; each paper
+          connected by a focus on how regulatory and market structures shape
+          patients' ability to obtain care.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <span class="tag">Paper 1 &bull; Pharmaceutical Policy</span>
+            <h3>Insulin Copay Caps Under the IRA</h3>
+            <p>
+              Difference-in-differences evaluation of the Inflation Reduction
+              Act's capped insulin copay provision in Medicare Advantage,
+              using IQVIA Pharmetrics Plus data.
+            </p>
+            <a href="research.html#insulin">Read more &rarr;</a>
+          </div>
+
+          <div class="card">
+            <span class="tag">Paper 2 &bull; Provider Policy</span>
+            <h3>APRN Full Practice Authority</h3>
+            <p>
+              Multi-level modeling analysis of how granting APRNs full practice
+              authority affects diabetes treatment outcomes, structured by the
+              5 A's of Access framework.
+            </p>
+            <a href="research.html#aprn">Read more &rarr;</a>
+          </div>
+
+          <div class="card">
+            <span class="tag">Paper 3 &bull; Spatial Epidemiology</span>
+            <h3>Diabetic Foot Ulcers in Arkansas</h3>
+            <p>
+              Emerging hotspot analysis and explanatory modeling of DFU
+              prevalence patterns to guide resource allocation and targeted
+              intervention.
+            </p>
+            <a href="research.html#dfu">Read more &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Background</h2>
+        <p>
+          Before returning to academia, I spent five years at Blue Cross Blue
+          Shield of Arkansas across product modernization, data strategy, and
+          senior data analysis &mdash; advising leadership on statistical analysis
+          and healthcare trends for an organization serving over one million members.
+          I bring that payer perspective to my research and teaching at UAMS, where
+          I instruct graduate courses in health policy and healthcare systems.
+        </p>
+        <div class="cta-row" style="justify-content: flex-start; margin-top: 1rem;">
+          <a href="cv.html" class="btn btn-primary">Full CV</a>
+          <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </section>
+
+    </div>
   </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Will Watson &bull;
+      <a href="mailto:watsonwp@gmail.com">watsonwp@gmail.com</a> &bull;
+      <a href="https://www.linkedin.com/in/william-watson-hsr" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -8,6 +8,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -35,99 +36,139 @@
     </div>
   </header>
 
-  <section class="hero">
+  <!-- Full-width hero with library background image -->
+  <section class="hero hero-image">
     <div class="container">
-      <h1>William Watson</h1>
-      <p class="subtitle">Health Services Researcher &bull; PhD Candidate, UAMS</p>
-      <p>
-        I study how insurance design, provider regulation, and geography
-        shape access to care &mdash; combining five years of payer experience
-        at Blue Cross Blue Shield with causal inference, administrative claims
-        analysis, and spatial analytics.
+      <p class="subtitle">William Watson &bull; Health Services Researcher</p>
+      <h1>How do insurance design and policy shape access to care?</h1>
+      <p class="hero-desc">
+        Combining five years of payer experience at Blue Cross Blue Shield
+        with causal inference and administrative claims analysis to answer
+        questions that matter for patients, payers, and policymakers.
       </p>
       <div class="cta-row">
-        <a href="research.html" class="btn btn-primary">View Research</a>
+        <a href="research.html" class="btn btn-primary">Explore My Research</a>
         <a href="about.html" class="btn btn-outline">About Me</a>
       </div>
     </div>
   </section>
 
-  <div class="content">
+  <!-- Three visual feature cards -->
+  <section class="feature-section">
     <div class="container">
+      <p class="section-label">Explore</p>
+      <h2>What I Do</h2>
 
-      <section>
-        <h2>Dissertation Research</h2>
-        <p>
-          My three-aim dissertation evaluates how copay caps and
-          scope-of-practice reform affect insulin utilization, treatment
-          quality, and acute clinical outcomes &mdash; unified by Grossman's
-          health capital model and powered by IQVIA PharMetrics Plus data.
-        </p>
+      <div class="feature-grid">
 
-        <div class="card-grid">
-          <div class="card">
-            <span class="tag">Aim 1 &bull; Federal Policy</span>
-            <h3>IRA Insulin Copay Cap in Medicare Advantage</h3>
-            <p>
-              Propensity score matching evaluation of the $35/month federal
-              cap on insulin copays &mdash; effects on adherence, formulation
-              switching, and acute events.
-            </p>
-            <a href="research.html#aim1">Read more &rarr;</a>
+        <a href="research.html" class="feature-card feature-research">
+          <div class="feature-banner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              <path d="M11 8v6M8 11h6"/>
+            </svg>
           </div>
-
-          <div class="card">
-            <span class="tag">Aim 2 &bull; State Policy</span>
-            <h3>State Insulin Copay Caps &amp; ERISA</h3>
-            <p>
-              Callaway-Sant'Anna staggered DiD across 25+ state caps in
-              commercial populations, with ERISA preemption triple-DiD.
-            </p>
-            <a href="research.html#aim2">Read more &rarr;</a>
+          <div class="feature-body">
+            <h3>Research</h3>
+            <p>Three-aim dissertation on insulin copay caps and scope-of-practice reform, powered by IQVIA PharMetrics Plus.</p>
+            <span class="feature-link">View research &rarr;</span>
           </div>
+        </a>
 
-          <div class="card">
-            <span class="tag">Aim 3 &bull; Workforce Policy</span>
-            <h3>APRN &amp; PA Scope-of-Practice Reform</h3>
-            <p>
-              Staggered DiD evaluation of full practice authority and optimal
-              team practice effects on HEDIS measures and acute events.
-            </p>
-            <a href="research.html#aim3">Read more &rarr;</a>
+        <a href="teaching.html" class="feature-card feature-teaching">
+          <div class="feature-banner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
           </div>
-        </div>
-      </section>
+          <div class="feature-body">
+            <h3>Teaching</h3>
+            <p>Graduate courses in health policy and healthcare systems at UAMS, grounded in real-world payer and policy cases.</p>
+            <span class="feature-link">View courses &rarr;</span>
+          </div>
+        </a>
 
-      <section>
-        <h2>Background</h2>
-        <p>
-          Before returning to academia, I spent five years at Blue Cross Blue
-          Shield of Arkansas across product modernization, data strategy, and
-          senior data analysis &mdash; advising leadership on statistical analysis
-          and healthcare trends for an organization serving over one million members.
-          I bring that payer perspective to my research and teaching at UAMS, where
-          I instruct graduate courses in health policy and healthcare systems.
-        </p>
-        <div class="cta-row" style="justify-content: flex-start; margin-top: 1rem;">
-          <a href="cv.html" class="btn btn-primary">Full CV</a>
-          <a href="contact.html" class="btn btn-outline">Get in Touch</a>
-        </div>
-      </section>
+        <a href="cv.html" class="feature-card feature-cv">
+          <div class="feature-banner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#e8d5a3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="feature-body">
+            <h3>CV</h3>
+            <p>Publications, presentations, industry experience, and technical skills across research and data analysis.</p>
+            <span class="feature-link">View CV &rarr;</span>
+          </div>
+        </a>
 
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Quote divider -->
+  <section class="quote-section">
+    <div class="container">
+      <blockquote>
+        &ldquo;Good research isn't just methodologically sound &mdash; it needs to be
+        communicated clearly enough that the people who can act on it
+        actually understand it.&rdquo;
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Background section -->
+  <section class="home-about">
+    <div class="container">
+      <h2>Background</h2>
+      <p>
+        Before returning to academia, I spent five years at Blue Cross Blue
+        Shield of Arkansas across product modernization, data strategy, and
+        senior data analysis &mdash; advising leadership on statistical analysis
+        and healthcare trends for an organization serving over one million members.
+        I bring that payer perspective to my research and teaching at UAMS, where
+        I instruct graduate courses in health policy and healthcare systems.
+      </p>
+      <div class="cta-row">
+        <a href="cv.html" class="btn btn-outline-dark">Full CV</a>
+        <a href="contact.html" class="btn btn-outline-dark">Get in Touch</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
-      &copy; 2026 Will Watson &bull;
-      <a href="contact.html">Contact</a> &bull;
-      <a href="https://www.linkedin.com/in/william-watson-hsr" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <span class="footer-brand">Elementary, Dear Watson</span>
+          <p>Health services researcher bridging five years of payer experience with academic rigor. PhD candidate at the University of Arkansas for Medical Sciences.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <a href="research.html">Research</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="cv.html">CV</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-connect">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/william-watson-hsr" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="contact.html">Send a Message</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Will Watson
+      </div>
     </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.content section, .card, .timeline-item').forEach(el => el.classList.add('fade-in'));
+      document.querySelectorAll('.feature-card, .home-about, .quote-section blockquote').forEach(el => el.classList.add('fade-in'));
       const obs = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Research by Will Watson — IRA insulin copay caps, APRN scope of practice, and GIS epidemiology of diabetic foot ulcers in Arkansas.">
+  <meta name="description" content="Research by Will Watson — insulin copay cap policy, scope-of-practice reform, and diabetes care quality using causal inference and administrative claims data.">
   <title>Research — Elementary, Dear Watson</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,145 +48,191 @@
       <section>
         <h2>Dissertation</h2>
         <p>
-          My three-paper dissertation examines Type II diabetes through
-          advanced causal inference, statistical, and geospatial methods. Each
-          paper is connected by a focus on how regulatory and market structures
-          shape patients' ability to obtain care, informed by Penchansky &amp;
-          Thomas's 5 A's of Access framework. The work utilizes longitudinal
-          study designs, causal inference frameworks, and geospatial analytics
-          with large-scale administrative claims datasets.
+          My three-aim dissertation uses Grossman's (1972) health capital model
+          as a unifying framework to evaluate how policy interventions — copay
+          caps and scope-of-practice reform — affect insulin utilization,
+          treatment quality, and acute clinical outcomes for patients with
+          diabetes. All three aims draw on IQVIA PharMetrics Plus (2018–October
+          2023), covering fully-insured commercial, self-insured (ERISA), and
+          Medicare Advantage populations.
         </p>
       </section>
 
-      <!-- Paper 1 -->
-      <section id="insulin">
+      <!-- Aim 1 -->
+      <section id="aim1">
         <div class="card">
-          <span class="tag">Paper 1 &bull; Pharmaceutical Policy</span>
-          <h3>Quasi-Experimental Evaluation of the Inflation Reduction Act's Capped Insulin Copay Provision</h3>
+          <span class="tag">Aim 1 &bull; Federal Pharmaceutical Policy</span>
+          <h3>IRA &sect;11406 Insulin Copay Cap in Medicare Advantage</h3>
 
           <h4>The Question</h4>
           <p>
-            The Inflation Reduction Act capped insulin copayments for Medicare
-            beneficiaries. Does this provision actually improve medication
-            adherence and healthcare outcomes in Medicare Advantage populations?
+            The Inflation Reduction Act capped insulin copayments at $35/month
+            for Medicare beneficiaries effective January 2023. Does this
+            provision reduce out-of-pocket costs, improve adherence, shift
+            patients toward more efficacious insulin formulations, and reduce
+            acute events in Medicare Advantage populations?
           </p>
 
           <h4>Why It Matters</h4>
           <p>
-            Insulin affordability is a high-profile policy issue with direct
-            consequences for patients managing diabetes. Payers, legislators, and
-            pharmacy benefit managers need evidence on whether federal copay caps
-            achieve their intended goals — and what the downstream effects are on
-            utilization and outcomes.
+            Insulin affordability is a high-profile policy issue — 1 in 4
+            patients report cost-related rationing, with 3x higher odds of
+            poor glycemic control. Payers, CMS, and legislators need
+            patient-level evidence on whether the federal cap achieves its
+            intended goals and what the downstream effects are on utilization,
+            formulation switching, and acute events (DKA, HHS, severe
+            hypoglycemia).
           </p>
 
           <h4>Methods</h4>
           <p class="methods">
-            <strong>Design:</strong> Difference-in-differences, exploiting the
-            IRA's implementation timeline to identify causal effects on
-            adherence and healthcare utilization.
+            <strong>Design:</strong> Propensity score matching within Medicare
+            Advantage on baseline out-of-pocket exposure; fallback to
+            within-person + calendar-month fixed effects to control for
+            deductible-phase seasonality.
           </p>
           <p class="data">
-            <strong>Data:</strong> IQVIA Pharmetrics Plus — a large-scale
-            administrative claims dataset covering Medicare Advantage populations,
-            capturing pharmacy fills, cost-sharing, and utilization patterns.
+            <strong>Data:</strong> IQVIA PharMetrics Plus — pharmacy fills,
+            cost-sharing, and utilization patterns in MA populations.
           </p>
 
           <h4>So What?</h4>
           <p>
-            Findings inform ongoing federal debates about pharmaceutical pricing
-            regulation and help payers anticipate the downstream effects of
-            copay cap mandates on adherence, switching behavior, and total cost
-            of care. Presented at ASHEcon 2025.
+            First patient-level MA estimate accounting for deductible-phase
+            seasonality. First study linking the IRA cap to insulin-type
+            substitution and acute clinical events. Presented at ASHEcon 2025.
           </p>
         </div>
       </section>
 
-      <!-- Paper 2 -->
-      <section id="aprn">
+      <!-- Aim 2 -->
+      <section id="aim2">
         <div class="card">
-          <span class="tag">Paper 2 &bull; Provider Policy</span>
-          <h3>Multi-Level Modeling Analysis of APRN Full Practice Authority Impact on Diabetes Treatment Outcomes</h3>
+          <span class="tag">Aim 2 &bull; State Pharmaceutical Policy</span>
+          <h3>State Insulin Copay Caps in Commercial and ERISA Populations</h3>
 
           <h4>The Question</h4>
           <p>
-            When states grant Advanced Practice Registered Nurses (APRNs) full
-            practice authority — removing physician oversight requirements —
-            does it measurably improve diabetes treatment outcomes?
+            Over 25 states have adopted insulin copay caps since Colorado's
+            January 2020 law. Do these caps reduce out-of-pocket costs, improve
+            adherence, shift insulin formulation mix, and reduce acute events
+            in commercially insured populations — and does ERISA preemption
+            limit the reach of state-level mandates?
           </p>
 
           <h4>Why It Matters</h4>
           <p>
-            Provider workforce shortages, particularly in rural and underserved
-            areas, drive the push to expand APRN scope of practice. Payers and
-            health systems need evidence on whether these regulatory changes
-            translate into real gains in care quality and access for patients
-            managing chronic conditions.
+            State copay caps are the primary legislative tool for addressing
+            insulin affordability outside Medicare. But ERISA preempts state
+            insurance regulation for self-insured employer plans, potentially
+            leaving a large share of the commercially insured population
+            unaffected. Payers and state legislators need evidence on both the
+            direct effects and the ERISA coverage gap.
           </p>
 
           <h4>Methods</h4>
           <p class="methods">
-            <strong>Design:</strong> Multi-level modeling to account for
-            nested structures (patients within providers within states) and
-            estimate the causal impact of full practice authority adoption
-            while controlling for clustering effects.
+            <strong>Design:</strong> Callaway-Sant'Anna staggered
+            difference-in-differences exploiting variation in state adoption
+            timing. Secondary ERISA preemption triple-DiD comparing fully-insured
+            vs. self-insured plans in cap vs. non-cap states.
           </p>
           <p class="data">
-            <strong>Framework:</strong> Penchansky &amp; Thomas 5 A's of Access
-            (Availability, Accessibility, Accommodation, Affordability,
-            Acceptability) to structure outcome measurement.
+            <strong>Data:</strong> IQVIA PharMetrics Plus — commercial
+            fully-insured and self-insured (ERISA) populations across all
+            50 states.
           </p>
 
           <h4>So What?</h4>
           <p>
-            Results speak directly to state legislatures weighing scope-of-practice
-            reform, payers evaluating network adequacy strategies, and health
-            systems making workforce planning decisions.
+            First multi-state study linking state insulin copay caps to acute
+            clinical outcomes. Extends existing work with a longer observation
+            window, modern staggered estimator, and clinical endpoints beyond
+            adherence.
           </p>
         </div>
       </section>
 
-      <!-- Paper 3 -->
-      <section id="dfu">
+      <!-- Aim 3 -->
+      <section id="aim3">
         <div class="card">
-          <span class="tag">Paper 3 &bull; Spatial Epidemiology</span>
+          <span class="tag">Aim 3 &bull; Provider Workforce Policy</span>
+          <h3>APRN and PA Scope-of-Practice Expansions and Diabetes Care Quality</h3>
+
+          <h4>The Question</h4>
+          <p>
+            When states grant Advanced Practice Registered Nurses full practice
+            authority or adopt PA Optimal Team Practice, does diabetes care
+            quality improve — as measured by HEDIS process measures and acute
+            clinical events?
+          </p>
+
+          <h4>Why It Matters</h4>
+          <p>
+            A projected 139,000+ physician shortfall by 2030 makes
+            scope-of-practice reform one of the most consequential workforce
+            policy levers. Payers evaluating network adequacy, state
+            legislatures weighing SoP bills, and health systems planning
+            workforce strategy all need evidence on whether removing supervisory
+            constraints translates into measurable quality gains.
+          </p>
+
+          <h4>Methods</h4>
+          <p class="methods">
+            <strong>Design:</strong> Callaway-Sant'Anna staggered
+            difference-in-differences for APRN full practice authority.
+            Event-study descriptive analysis for PA Optimal Team Practice
+            (limited post-period states).
+          </p>
+          <p class="data">
+            <strong>Data:</strong> IQVIA PharMetrics Plus — commercial and MA
+            populations. State-level treatment assignment sidesteps the
+            incident-to billing attribution problem.
+          </p>
+
+          <h4>So What?</h4>
+          <p>
+            First staggered-DiD evaluation linking scope-of-practice reform to
+            combined HEDIS process measures and acute clinical events. Results
+            speak directly to state legislatures, payers, and health systems.
+          </p>
+        </div>
+      </section>
+
+      <section id="other-research">
+        <h2>Other Current Research</h2>
+
+        <div class="card">
+          <span class="tag">Spatial Epidemiology</span>
           <h3>Emerging Hotspot Analysis of Diabetic Foot Ulcer Prevalence in Arkansas</h3>
-
-          <h4>The Question</h4>
           <p>
             Where are diabetic foot ulcers concentrated in Arkansas, what spatial
             patterns are emerging over time, and what risk factors explain the
-            geographic distribution?
-          </p>
-
-          <h4>Why It Matters</h4>
-          <p>
-            DFUs are among the most costly and morbid complications of diabetes,
-            often leading to amputation. Understanding the spatial distribution
-            and temporal trends of DFUs helps health systems, payers, and public
-            health agencies target prevention and treatment resources to where
-            they're needed most.
-          </p>
-
-          <h4>Methods</h4>
-          <p class="methods">
-            <strong>Design:</strong> Emerging hotspot analysis to identify
-            spatiotemporal trends, combined with explanatory modeling to
-            identify risk factors driving geographic patterns.
-          </p>
-          <p class="data">
-            <strong>Data:</strong> Large-scale administrative claims data
-            combined with geocoded provider/facility and demographic data.
-          </p>
-
-          <h4>So What?</h4>
-          <p>
-            The combination of emerging hotspot analysis with explanatory
-            modeling is a novel approach in DFU research. Findings can guide
-            resource allocation, network design, and targeted intervention
-            programs for payers and public health agencies.
+            geographic distribution? DFUs are among the most costly and morbid
+            complications of diabetes, often leading to amputation. This project
+            uses emerging hotspot analysis to identify spatiotemporal trends,
+            combined with explanatory modeling to identify risk factors driving
+            geographic patterns. Findings can guide resource allocation, network
+            design, and targeted intervention programs for payers and public
+            health agencies.
           </p>
         </div>
+
+        <p style="margin-top: 1.5rem;">
+          Additional research includes a family-level cost-sharing analysis
+          examining aggregated vs. embedded deductible structures and their
+          impact on healthcare utilization (presented at ASHEcon 2024 Emerging
+          Scholars Session), predictive modeling using deep learning to classify
+          family deductible types from administrative claims, and ongoing
+          geospatial health analytics published in peer-reviewed journals.
+        </p>
+        <p>
+          My broader research interests include health insurance benefit design
+          and its behavioral effects, the economics of provider workforce
+          regulation, geographic disparities in healthcare access, and
+          methodological applications of causal inference to administrative
+          claims data.
+        </p>
       </section>
 
       <section>
